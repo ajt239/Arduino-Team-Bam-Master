@@ -879,9 +879,9 @@ void right(){
    if(gradualAcceleration != topSpeed){
     for(int i = 100; i <= topSpeed; i++){
        gradualAcceleration = i; 
-       digitalWrite(motorOneDirectionPin, LOW);
+       digitalWrite(motorOneDirectionPin, HIGH);
        analogWrite(pwmMotorOnePin,gradualAcceleration);
-       digitalWrite(motorTwoDirectionPin, HIGH); 
+       digitalWrite(motorTwoDirectionPin, LOW); 
        analogWrite(pwmMotorTwoPin, gradualAcceleration);
        Serial.print("Gradual Acceleration Speed: ");
        Serial.println(gradualAcceleration);
